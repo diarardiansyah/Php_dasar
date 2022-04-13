@@ -64,6 +64,19 @@ function addData($data) {
 
 }
 
+function addDataMhs($data) {
+
+     global $conn;
+
+     $nama = $data["nama"];
+     $jenis_kelamin = $data["jenis_kelamin"];
+
+     $query = "INSERT INTO mahasiswa VALUES('', '$nama', '$jenis_kelamin')";
+     mysqli_query($conn, $query);
+
+     return mysqli_affected_rows($conn);
+}
+
 function hapus($id) {
 
      global $conn;

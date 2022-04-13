@@ -1,3 +1,27 @@
+<?php
+
+    require 'fungsi.php';
+
+    if ( isset($_POST['submit']) ) {
+
+        if ( addDataMhs($_POST) > 0 ) {
+            echo "
+                    <script> 
+                        alert('Data Berhasil Ditambahkan!');
+                        document.location.href = 'mahasiswa.php';
+                    </script>
+                 ";
+        } else {
+            echo "
+                    <script>
+                        alert('Data gagal ditambahkan!');
+                        document.location.href = 'mahasiswa.php';
+                    </script>
+                 ";
+        }
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
